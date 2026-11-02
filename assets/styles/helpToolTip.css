@@ -1,0 +1,72 @@
+/*
+    This file is part of SwitchySharp.
+    SwitchySharp is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SwitchySharp is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SwitchySharp.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* Colours come from the theme variables defined in options.css */
+span[data-help] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: -2px 0 -2px 4px;
+    vertical-align: -1px;
+    background: url("../images/help.png") center no-repeat;
+    opacity: 0.45;
+    cursor: help;
+}
+
+span[data-help]:hover {
+    opacity: 1;
+}
+
+.help {
+    z-index: 1000;
+    position: absolute;
+    max-width: 40em;
+    padding: 0.7em 1.1em;
+    color: var(--help-text);
+    font-size: 12.5px;
+    line-height: 150%;
+    white-space: normal;
+    background: var(--help-bg);
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    visibility: hidden;
+}
+
+.help p {
+    margin: 0.2em 0;
+}
+
+.help hr {
+    border: 0;
+    border-top: solid 1px var(--border-strong);
+    margin: 9px 0;
+}
+
+.help table {
+    border-spacing: 7px;
+}
+
+.help td {
+    vertical-align: top;
+    line-height: 150%;
+    white-space: normal !important;
+}
+
+.help i {
+    color: var(--help-accent);
+    font-style: normal;
+    white-space: nowrap;
+}

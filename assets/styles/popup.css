@@ -1,0 +1,308 @@
+/*
+    This file is part of SwitchySharp.
+    SwitchySharp is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SwitchySharp is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SwitchySharp.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* Dark theme (default) */
+:root {
+    color-scheme: dark;
+    --bg: #15171c;
+    --surface: #1d2027;
+    --hover: #2a2f3a;
+    --active: #252932;
+    --border: #323846;
+    --text: #e4e7ee;
+    --muted: #8d95a5;
+    --accent: #5b9bff;
+    --accent-soft: rgba(91, 155, 255, 0.14);
+
+    --c-blue: #6ea8ff;
+    --c-green: #5fd38a;
+    --c-red: #ff8a7a;
+    --c-yellow: #f2cc60;
+    --c-purple: #c99bff;
+    --c-inactive: #8d95a5;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #f5f7fb;
+    --hover: #eef2f8;
+    --active: #e5ebf5;
+    --border: #e1e6ef;
+    --text: #1d2433;
+    --muted: #697386;
+    --accent: #2f6fed;
+    --accent-soft: rgba(47, 111, 237, 0.10);
+
+    --c-blue: #2f6fed;
+    --c-green: #1f9d55;
+    --c-red: #e5484d;
+    --c-yellow: #d39e00;
+    --c-purple: #8e4ec6;
+    --c-inactive: #a0a8b8;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    min-width: 240px;
+    color: var(--text);
+    background: var(--bg);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+    -webkit-user-select: none;
+    user-select: none;
+    visibility: hidden;
+}
+
+td, th {
+    font: inherit;
+    color: inherit;
+}
+
+body * {
+    white-space: nowrap;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Menu ---------- */
+
+#menu {
+    padding: 6px;
+}
+
+#menu .templateItem {
+    display: none;
+}
+
+#menu .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px 7px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color .12s;
+}
+
+#menu .item:hover {
+    background: var(--hover);
+}
+
+#menu .item:active {
+    background: var(--active);
+}
+
+#menu .item img {
+    width: 16px;
+    height: 16px;
+    flex: none;
+    opacity: .85;
+}
+
+#menu .item span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* profile colour marker */
+#menu .icon {
+    position: relative;
+    flex: none;
+    width: 16px;
+    height: 16px;
+}
+
+#menu .proxy .icon::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .9;
+}
+
+#menu .proxy .icon { color: var(--c-blue); }
+#menu .blue .icon { color: var(--c-blue); }
+#menu .green .icon { color: var(--c-green); }
+#menu .red .icon { color: var(--c-red); }
+#menu .yellow .icon { color: var(--c-yellow); }
+#menu .purple .icon { color: var(--c-purple); }
+#menu .inactive .icon { color: var(--c-inactive); }
+
+#menu #automaticMode .icon::before {
+    left: 1px;
+    top: 1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 0;
+    background: url(../images/switch.png) center / 14px no-repeat;
+}
+
+#menu .item.checked {
+    padding-right: 32px;
+    background: var(--accent-soft);
+    font-weight: 600;
+}
+
+#menu .item.checked::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 4px;
+    height: 9px;
+    margin-top: -6px;
+    border: solid var(--accent);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#menu .item.action {
+    color: var(--muted);
+}
+
+#menu .item.action:hover {
+    color: var(--text);
+}
+
+#menu .separator {
+    height: 1px;
+    margin: 5px 6px;
+    background: var(--border);
+}
+
+/* ---------- About ---------- */
+
+#about {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    width: 350px;
+    padding: 18px;
+    cursor: default;
+}
+
+#about .header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+#about .header .title {
+    font-size: 22px;
+    font-weight: 600;
+    direction: ltr;
+}
+
+#about .header .version {
+    color: var(--muted);
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+#about .header .versionNumber {
+    color: var(--text);
+    font-weight: 600;
+}
+
+#about .body {
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+#developer {
+    border-spacing: 0 4px;
+    color: var(--muted);
+}
+
+#developer td:first-child {
+    padding-right: 10px;
+}
+
+#developer td:last-child {
+    color: var(--text);
+}
+
+#about .links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+}
+
+#about .footer {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+#about .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#about .close::before, #about .close::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    width: 2px;
+    height: 14px;
+    background: var(--muted);
+    transform: rotate(45deg);
+}
+
+#about .close::after {
+    transform: rotate(-45deg);
+}
+
+#about .close:hover {
+    background: var(--hover);
+}

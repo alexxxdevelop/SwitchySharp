@@ -1,0 +1,7 @@
+[AutoProxy 0.2.9]
+! SwitchySharp rule list in AutoProxy format: Telegram (telegram.org and t.me)
+! Check "AutoProxy Compatible List" in Options -> Switch Rules when using this file.
+! "||domain^" = the domain and all its subdomains ("^" ends the domain, so t.me does not match t.media.com).
+! All sites of the list go through the single profile chosen in "Proxy Profile" next to the list URL.
+||telegram.org^
+||t.me^

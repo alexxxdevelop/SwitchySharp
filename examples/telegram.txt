@@ -1,0 +1,15 @@
+; SwitchySharp rule list: Telegram (telegram.org and t.me)
+;
+; One line = one URL pattern, add as many lines as you need.
+; "*://*.telegram.org/*" matches telegram.org itself and all its subdomains (web.telegram.org, ...).
+;
+; The file does not name a proxy profile: all sites of the list go through the single profile
+; chosen in Options -> Switch Rules -> Online Rule List -> "Proxy Profile" (e.g. "My Proxy").
+; To use different profiles for different sites, add them as Switch Rules instead.
+#BEGIN
+
+[wildcard]
+*://*.telegram.org/*
+*://*.t.me/*
+
+#END

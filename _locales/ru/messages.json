@@ -1,0 +1,431 @@
+{
+   "global_direction": {
+      "message": "ltr"
+   },
+   "global_textAlign": {
+      "message": "left"
+   },
+   "manifest_appDescription": {
+      "message": "Быстрое переключение прокси: профили, автоматический выбор прокси по правилам, онлайн-списки. Manifest V3, тёмная и светлая темы."
+   },
+   "manifest_appName": {
+      "message": "Proxy SwitchySharp"
+   },
+   "manifest_iconTitle": {
+      "message": "[Загрузка...]"
+   },
+   "message_SwitchRulesDisabled": {
+      "message": "Сначала включите правила переключения и онлайн-список правил!"
+   },
+   "message_apply2All": {
+      "message": "Применить этот профиль ко всем правилам? \n\n Выбранный профиль: ($1)"
+   },
+   "message_cannotReadOptionsBackup": {
+      "message": "Не удалось прочитать файл резервной копии!"
+   },
+   "message_cannotRestoreOptionsBackup": {
+      "message": "Не удалось восстановить настройки из этого файла!\n\nФайл резервной копии повреждён или имеет неверный формат."
+   },
+   "message_cannotSaveFile": {
+      "message": "Не удалось сохранить файл!"
+   },
+   "message_deleteSelectedProfile": {
+      "message": "Удалить выбранный профиль?\n\nПрофиль: ($1)"
+   },
+   "message_deleteSelectedRule": {
+      "message": "Удалить выбранное правило?\n\nПравило: ($1)"
+   },
+   "message_errorDownloadingRuleList": {
+      "message": "Ошибка загрузки списка правил!"
+   },
+   "message_firstTimeWelcome": {
+      "message": "Добро пожаловать!<br>\r\nЧтобы начать работу, создайте ниже профили прокси и нажмите «Сохранить»."
+   },
+   "message_optionsSaved": {
+      "message": "Настройки сохранены"
+   },
+   "message_profileDeleted": {
+      "message": "Профиль удалён"
+   },
+   "message_restoreOptionsBackup": {
+      "message": "Восстановить настройки SwitchySharp из этой резервной копии?\n\nТекущие настройки будут перезаписаны."
+   },
+   "message_ruleDeleted": {
+      "message": "Правило удалено"
+   },
+   "message_ruleListUpdated": {
+      "message": "Список правил обновлён."
+   },
+   "message_rulesFirstTimeWelcome": {
+      "message": "Вы впервые включили режим авто-переключения. С чего начать:<br>\r\n<ol>\r\n\t<li>Настройте «Правило по умолчанию» ниже — оно применяется, если не подошло ни одно другое правило.</li>\r\n\t<li>Добавьте правила (кнопка «Новое правило») — для каждого укажите шаблон URL и профиль прокси.</li>\r\n\t<li>Нажмите «Сохранить» и «Закрыть», чтобы закрыть вкладку.</li>\r\n</ol>"
+   },
+   "message_saveChangedValues": {
+      "message": "Сохранить изменения?"
+   },
+   "message_saveOptions": {
+      "message": "Сохранить настройки?"
+   },
+   "message_selectBackupFile": {
+      "message": "Сначала укажите адрес файла резервной копии."
+   },
+   "message_successRestoreOptionsBackup": {
+      "message": "Настройки SwitchySharp восстановлены."
+   },
+   "options_12Hours": {
+      "message": "12 часов"
+   },
+   "options_15Minutes": {
+      "message": "15 минут"
+   },
+   "options_1Hour": {
+      "message": "1 час"
+   },
+   "options_30Minutes": {
+      "message": "30 минут"
+   },
+   "options_3Hours": {
+      "message": "3 часа"
+   },
+   "options_45Minutes": {
+      "message": "45 минут"
+   },
+   "options_6Hours": {
+      "message": "6 часов"
+   },
+   "options_autoConfig": {
+      "message": "Автоматическая настройка"
+   },
+   "options_autoConfigUrl": {
+      "message": "URL PAC-скрипта"
+   },
+   "options_autoProxyCompatible": {
+      "message": "Список в формате AutoProxy"
+   },
+   "options_autoProxyCompatible_help": {
+      "message": "Отметьте, если ссылка ведёт на список правил в формате AutoProxy (например, gfwlist)."
+   },
+   "options_clickToEdit": {
+      "message": "Нажмите, чтобы изменить"
+   },
+   "options_close": {
+      "message": "Закрыть"
+   },
+   "options_confirmDeletion": {
+      "message": "Подтверждать удаление профилей и правил."
+   },
+   "options_confirmDeletion_help": {
+      "message": "Показывать запрос подтверждения при удалении профилей прокси и правил переключения."
+   },
+   "options_cycledProfiles": {
+      "message": "Профили для переключения (перетащите, чтобы изменить порядок):"
+   },
+   "options_defaultRule": {
+      "message": "Правило по умолчанию"
+   },
+   "options_defaultRuleUrlPattern": {
+      "message": "Все URL, которые не подошли ни под одно другое правило"
+   },
+   "options_defaultRule_help": {
+      "message": "<p>Это правило применяется, если не подошло ни одно другое.</p>\r\n<p><b>Примечание:</b> это правило нельзя удалить.</p>"
+   },
+   "options_deleteProfile": {
+      "message": "Удалить профиль"
+   },
+   "options_deleteRule": {
+      "message": "Удалить правило"
+   },
+   "options_everyday": {
+      "message": "Раз в день"
+   },
+   "options_exportPacFile": {
+      "message": "Экспорт PAC-файла"
+   },
+   "options_exportPacFile_help": {
+      "message": " Сохранить правила переключения в PAC-файл, чтобы использовать их в других браузерах. "
+   },
+   "options_exportRuleList": {
+      "message": "Экспорт списка правил"
+   },
+   "options_exportRuleList_help": {
+      "message": " Сохранить правила переключения в файл списка правил SwitchySharp, чтобы поделиться им. "
+   },
+   "options_ftpProxy": {
+      "message": "FTP-прокси"
+   },
+   "options_headerTitle": {
+      "message": "Настройки SwitchySharp"
+   },
+   "options_httpProxy": {
+      "message": "HTTP-прокси"
+   },
+   "options_httpsProxy": {
+      "message": "HTTPS-прокси"
+   },
+   "options_importPAC": {
+      "message": "Импорт PAC-файла"
+   },
+   "options_language": {
+      "message": "Язык"
+   },
+   "options_languageAuto": {
+      "message": "Язык браузера"
+   },
+   "options_lastSelectedProfile": {
+      "message": "(Последний выбранный профиль)"
+   },
+   "options_lastSuccessfulUpdate": {
+      "message": "Последнее обновление: "
+   },
+   "options_makeBackup": {
+      "message": "Создать копию"
+   },
+   "options_makeBackup_help": {
+      "message": " Сохранить все настройки SwitchySharp в файл (профили, правила и остальные параметры). "
+   },
+   "options_manualConfig": {
+      "message": "Ручная настройка"
+   },
+   "options_miscOptions": {
+      "message": "Прочее"
+   },
+   "options_never": {
+      "message": "Никогда"
+   },
+   "options_newProfile": {
+      "message": "Новый профиль"
+   },
+   "options_newRule": {
+      "message": "Новое правило"
+   },
+   "options_noProxyFor": {
+      "message": "Без прокси для"
+   },
+   "options_noProxyFor_help": {
+      "message": "Разделяйте записи точкой с запятой ( ; )."
+   },
+   "options_notCycledProfiles": {
+      "message": "Остальные профили (перетащите в поле выше, чтобы включить):"
+   },
+   "options_patternType": {
+      "message": "Тип шаблона"
+   },
+   "options_patternTypeRegExp": {
+      "message": "RegExp"
+   },
+   "options_patternTypeWildcard": {
+      "message": "Шаблон"
+   },
+   "options_patternType_help": {
+      "message": "<p>Тип шаблона URL.</p><hr />\r\n<table>\r\n\t<tr>\r\n\t\t<td><i>Шаблон</i></td>\r\n\t\t<td>шаблон со звёздочками (wildcard).</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td><i>RegExp</i></td>\r\n\t\t<td>регулярное выражение.</td>\r\n\t</tr>\r\n</table>"
+   },
+   "options_profileColor": {
+      "message": "Цвет профиля"
+   },
+   "options_profileDetails": {
+      "message": "Параметры профиля"
+   },
+   "options_profileName": {
+      "message": "Название"
+   },
+   "options_proxyPort": {
+      "message": "Порт"
+   },
+   "options_proxyProfile": {
+      "message": "Профиль прокси"
+   },
+   "options_proxyProfile_help": {
+      "message": "Профиль прокси, который применяется, когда URL подходит под это правило."
+   },
+   "options_proxyProfiles": {
+      "message": "Профили прокси"
+   },
+   "options_quickSwitch": {
+      "message": "Быстрое переключение"
+   },
+   "options_quickSwitch_cycle_help": {
+      "message": "При нажатии на иконку SwitchySharp будет по очереди применять эти профили."
+   },
+   "options_quickSwitch_help": {
+      "message": "<p>Переключение между профилями прокси одним нажатием \n(на иконку SwitchySharp).</p><hr />\n<p><strong>Примечание:</strong> при включённой функции меню SwitchySharp\nпо нажатию на иконку не открывается. Чтобы открыть настройки,\nнажмите на иконку правой кнопкой мыши и выберите «Параметры».</p>"
+   },
+   "options_refreshTab": {
+      "message": "Перезагружать текущую вкладку при смене профиля"
+   },
+   "options_refreshTab_help": {
+      "message": "Перезагружать текущую вкладку при смене профиля через меню или быстрое переключение."
+   },
+   "options_reloadEvery": {
+      "message": "Обновлять каждые"
+   },
+   "options_reloadEvery_help": {
+      "message": "Как часто заново загружать список правил."
+   },
+   "options_resetOptions": {
+      "message": "Сбросить настройки"
+   },
+   "options_restoreBackup": {
+      "message": "Восстановить по ссылке"
+   },
+   "options_restoreBackup_help": {
+      "message": "Адрес файла настроек (например, 'http://example.com/switchy.bak')"
+   },
+   "options_restoreLocal": {
+      "message": "Восстановить из файла"
+   },
+   "options_restoreLocal_help": {
+      "message": "Восстановить настройки SwitchySharp из файла на компьютере."
+   },
+   "options_ruleList": {
+      "message": "Онлайн-список правил"
+   },
+   "options_ruleListExample": {
+      "message": "Пример"
+   },
+   "options_ruleListExample_lines": {
+      "message": "Одна строка — один сайт (шаблон URL), строк может быть сколько угодно. <code>*://*.t.me/*</code> подходит и для самого <code>t.me</code>, и для всех его поддоменов."
+   },
+   "options_ruleListExample_note": {
+      "message": "Тот же список в формате AutoProxy (отметьте <b>Список в формате AutoProxy</b>). <code>||t.me^</code> — это t.me и его поддомены, <code>^</code> обозначает конец имени домена:"
+   },
+   "options_ruleListExample_profile": {
+      "message": "<b>Где указывается профиль прокси?</b> Не в файле. Все сайты онлайн-списка идут через один профиль — тот, что выбран в <b>Профиль прокси</b> рядом с <b>URL списка правил</b>. Чтобы разные сайты шли через разные профили, добавьте их как <b>правила переключения</b> выше: у каждого правила свой <b>Профиль прокси</b>."
+   },
+   "options_ruleListExample_step1": {
+      "message": "Создайте текстовый файл (например, <code>telegram.txt</code>) с содержимым ниже и опубликуйте его по любой ссылке (raw-файл на GitHub, Gist, свой сайт):"
+   },
+   "options_ruleListExample_step2": {
+      "message": "Вставьте ссылку на файл в <b>URL списка правил</b>, выберите <b>Мой прокси</b> в <b>Профиль прокси</b>, не отмечайте <b>Список в формате AutoProxy</b> и нажмите <b>Сохранить</b> (список загрузится сразу; <b>Обновить сейчас</b> загружает его заново)."
+   },
+   "options_ruleListExample_step3": {
+      "message": "Выберите <b>Авто-переключение</b> в меню расширения. Сайты Telegram пойдут через <b>Мой прокси</b>, остальные — по правилу по умолчанию."
+   },
+   "options_ruleListExample_title": {
+      "message": "Пример: открывать Telegram (telegram.org и t.me) через профиль «Мой прокси»"
+   },
+   "options_ruleListProxyProfile_help": {
+      "message": "Профиль прокси, который применяется, когда URL подходит под любое правило из этого списка."
+   },
+   "options_ruleListUrl": {
+      "message": "URL списка правил"
+   },
+   "options_ruleListUrl_help": {
+      "message": "Адрес списка правил (локальные файлы не поддерживаются)."
+   },
+   "options_ruleList_help": {
+      "message": "Загружать готовые правила переключения из интернета."
+   },
+   "options_ruleName": {
+      "message": "Название правила"
+   },
+   "options_save": {
+      "message": "Сохранить"
+   },
+   "options_socks4": {
+      "message": "SOCKS v4"
+   },
+   "options_socks5": {
+      "message": "SOCKS v5"
+   },
+   "options_socksHost": {
+      "message": "SOCKS-хост"
+   },
+   "options_startupProfile": {
+      "message": "Профиль при запуске:"
+   },
+   "options_startupProfile_help": {
+      "message": "Профиль, который применяется при запуске расширения."
+   },
+   "options_switchRules": {
+      "message": "Правила переключения"
+   },
+   "options_switchRulesEnable": {
+      "message": "Включить правила переключения"
+   },
+   "options_switchRulesEnable_help": {
+      "message": "<p>Правила переключения задают, какой прокси использовать для каждого URL.</p><hr />\r\n<p>Когда опция включена, в меню расширения появляется пункт <i>Авто-переключение</i> — он включает правила переключения.</p>"
+   },
+   "options_tabGeneral": {
+      "message": "Общие"
+   },
+   "options_tabImportExport": {
+      "message": "Импорт/Экспорт"
+   },
+   "options_tabProxyProfiles": {
+      "message": "Профили прокси"
+   },
+   "options_tabSwitchRules": {
+      "message": "Правила переключения"
+   },
+   "options_theme": {
+      "message": "Тема"
+   },
+   "options_themeDark": {
+      "message": "Тёмная"
+   },
+   "options_themeLight": {
+      "message": "Светлая"
+   },
+   "options_untitledProfile": {
+      "message": "[Новый профиль]"
+   },
+   "options_updateListNow": {
+      "message": "Обновить сейчас"
+   },
+   "options_urlPattern": {
+      "message": "Шаблон URL"
+   },
+   "options_urlPattern_help": {
+      "message": "<p>Шаблон адреса страницы.</p><hr />\r\n<table>\r\n\t<tr>\r\n\t\t<td colspan='2'><b>Синтаксис шаблона</b></td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td><i>Звёздочка (*) </i></td>\r\n\t\t<td>любое количество любых символов, в том числе ни одного.</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td><i>Вопросительный знак (?) </i></td>\r\n\t\t<td>ровно один любой символ.</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td colspan='2'><br /><b>Примеры</b></td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td><i>*://www.google.com/* </i></td>\r\n\t\t<td>Любой URL на хосте 'www.google.com' с любой схемой (http, https ...).</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td><i>https://*.google.com/foo*bar </i></td>\r\n\t\t<td>Любой URL на хосте домена 'google.com' (например, 'www.google.com',\r\n\t\t'docs.google.com' или 'google.com') со схемой https, если путь\r\n\t\tначинается с '/foo' и заканчивается на 'bar'.</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td><i>http://example.org/foo/bar.html </i></td>\r\n\t\t<td>Только этот URL.</td>\r\n\t</tr>\r\n</table>"
+   },
+   "options_useSameProxy": {
+      "message": "Один прокси-сервер для всех протоколов"
+   },
+   "popup_aboutSwitchy": {
+      "message": "О SwitchySharp"
+   },
+   "popup_autoSwitchMode": {
+      "message": "Авто-переключение"
+   },
+   "popup_autoSwitchMode_help": {
+      "message": "Автоматически выбирать профиль прокси \nдля каждого URL по правилам переключения."
+   },
+   "popup_basedOn": {
+      "message": "На основе работы"
+   },
+   "popup_copyright": {
+      "message": "Copyright &copy; 2026 @alexxxdevelop.<br />Некоторые права защищены."
+   },
+   "popup_developedBy": {
+      "message": "Разработчик"
+   },
+   "popup_options": {
+      "message": "Настройки"
+   },
+   "popup_supportAndBugReports": {
+      "message": "Поддержка и сообщения об ошибках"
+   },
+   "popup_switchyPlusWebPage": {
+      "message": "Сайт SwitchyPlus"
+   },
+   "popup_switchyWebPage": {
+      "message": "Сайт Switchy!"
+   },
+   "popup_version": {
+      "message": "версия"
+   },
+   "proxy_autoSwitch": {
+      "message": "Авто-переключение"
+   },
+   "proxy_autoSwitchIconTitle": {
+      "message": "Режим авто-переключения\nПрокси для текущей страницы: $1"
+   },
+   "proxy_directConnection": {
+      "message": "Без прокси"
+   },
+   "proxy_directConnection_help": {
+      "message": "Отключить прокси"
+   },
+   "proxy_systemProxy": {
+      "message": "Системный прокси"
+   }
+}

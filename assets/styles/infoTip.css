@@ -1,0 +1,98 @@
+/*
+    This file is part of SwitchySharp.
+    SwitchySharp is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SwitchySharp is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SwitchySharp.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* Colours come from the theme variables defined in options.css */
+#infoTipContainer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100px;
+    line-height: 20px;
+    font-size: 13px;
+    text-align: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#infoTipContainer > div {
+    display: inline-block;
+    max-width: 640px;
+    margin-top: 12px;
+    padding: 10px 34px 10px 40px;
+    color: var(--tip-text);
+    text-align: left;
+    white-space: normal;
+    border: 1px solid var(--tip-border);
+    border-left-width: 4px;
+    border-radius: 8px;
+    background: var(--tip-bg) url("../images/info.png") 14px 12px no-repeat;
+    box-shadow: var(--shadow);
+    pointer-events: auto;
+}
+
+#infoTipContainer .close {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: -26px;
+    margin-top: -2px;
+    padding: 2px;
+    background: url("../images/close-tip.png") center no-repeat;
+    cursor: pointer;
+    opacity: 0.6;
+    display: none;
+    filter: var(--close-icon-filter);
+}
+
+#infoTipContainer .close:hover {
+    opacity: 1;
+}
+
+#infoTipContainer.info div {
+    color: var(--tip-text);
+    border-color: var(--tip-border);
+    background-color: var(--tip-bg);
+}
+
+#infoTipContainer.note div {
+    padding: 14px 34px 14px 20px;
+    color: var(--text);
+    border-color: var(--border-strong);
+    border-left-color: var(--accent);
+    background: var(--surface-2) none;
+}
+
+#infoTipContainer.note ol {
+    margin: 6px 0 0;
+    padding-left: 20px;
+}
+
+#infoTipContainer.success div {
+    color: var(--tip-success-text);
+    border-color: var(--tip-success-border);
+    background: var(--tip-success-bg) url("../images/accept.png") 14px 12px no-repeat;
+}
+
+#infoTipContainer.warning div {
+    color: var(--tip-warning-text);
+    border-color: var(--tip-warning-border);
+    background: var(--tip-warning-bg) url("../images/warning.png") 14px 12px no-repeat;
+}
+
+#infoTipContainer.error div {
+    color: var(--tip-error-text);
+    border-color: var(--tip-error-border);
+    background: var(--tip-error-bg) url("../images/error.png") 14px 12px no-repeat;
+}

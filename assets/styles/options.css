@@ -1,0 +1,1020 @@
+/*
+    This file is part of SwitchySharp.
+    SwitchySharp is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SwitchySharp is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SwitchySharp.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* Dark theme (default) */
+:root {
+    color-scheme: dark;
+    --bg: #111318;
+    --surface: #181b22;
+    --surface-2: #1f232c;
+    --surface-3: #262b36;
+    --hover: #2b3140;
+    --border: #2e3442;
+    --border-strong: #3b4354;
+    --text: #e4e7ee;
+    --muted: #8d95a5;
+    --disabled: #5a6273;
+    --accent: #5b9bff;
+    --accent-hover: #4a8bf0;
+    --accent-soft: rgba(91, 155, 255, 0.14);
+    --danger: #ff7b72;
+    --danger-soft: rgba(255, 123, 114, .12);
+    --success-soft: rgba(95, 211, 138, .12);
+    --success-border: rgba(95, 211, 138, .35);
+    --shadow: 0 10px 30px rgba(0, 0, 0, .5);
+    --code-bg: #0c0e12;
+
+    --tip-text: #dbe6ff;
+    --tip-bg: #172338;
+    --tip-border: #2f4f86;
+    --tip-success-text: #c9f2d6;
+    --tip-success-bg: #13291d;
+    --tip-success-border: #2b6a43;
+    --tip-warning-text: #f6e3b0;
+    --tip-warning-bg: #2a2414;
+    --tip-warning-border: #7a6020;
+    --tip-error-text: #ffd2cc;
+    --tip-error-bg: #2e1714;
+    --tip-error-border: #8a3a33;
+    --help-bg: #222733;
+    --help-text: #d5dae4;
+    --help-accent: #8fb8ff;
+    --close-icon-filter: invert(1);
+
+    --c-blue: #6ea8ff;
+    --c-green: #5fd38a;
+    --c-red: #ff8a7a;
+    --c-yellow: #f2cc60;
+    --c-purple: #c99bff;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f4f6fa;
+    --surface: #ffffff;
+    --surface-2: #f7f9fc;
+    --surface-3: #eef2f8;
+    --hover: #e8edf6;
+    --border: #e1e6ef;
+    --border-strong: #cdd5e2;
+    --text: #1d2433;
+    --muted: #697386;
+    --disabled: #aab2c0;
+    --accent: #2f6fed;
+    --accent-hover: #255fd4;
+    --accent-soft: rgba(47, 111, 237, 0.09);
+    --danger: #e5484d;
+    --danger-soft: rgba(229, 72, 77, .10);
+    --success-soft: rgba(31, 157, 85, .08);
+    --success-border: rgba(31, 157, 85, .35);
+    --shadow: 0 10px 30px rgba(27, 39, 64, .14);
+    --code-bg: #f1f4f9;
+
+    --tip-text: #1e3a6e;
+    --tip-bg: #eef4ff;
+    --tip-border: #b9cff7;
+    --tip-success-text: #145c34;
+    --tip-success-bg: #ecf9f1;
+    --tip-success-border: #a6dcbc;
+    --tip-warning-text: #6b4e00;
+    --tip-warning-bg: #fff8e1;
+    --tip-warning-border: #f0d68a;
+    --tip-error-text: #8a1f1f;
+    --tip-error-bg: #fff0f0;
+    --tip-error-border: #f3b5b5;
+    --help-bg: #ffffff;
+    --help-text: #333c4e;
+    --help-accent: #2f6fed;
+    --close-icon-filter: none;
+
+    --c-blue: #2f6fed;
+    --c-green: #1f9d55;
+    --c-red: #e5484d;
+    --c-yellow: #e0a800;
+    --c-purple: #8e4ec6;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ---------- Header: language and theme switch ---------- */
+
+#header td {
+    vertical-align: middle;
+}
+
+#cmbLanguage {
+    width: auto;
+    min-width: 150px;
+    height: 36px;
+    margin-right: 10px;
+    background-color: var(--surface-2);
+}
+
+#themeSwitch {
+    display: inline-flex;
+    padding: 3px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+#themeSwitch button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 28px;
+    padding: 0 12px;
+    color: var(--muted);
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color .12s, color .12s;
+}
+
+#themeSwitch button:hover {
+    color: var(--text);
+}
+
+#themeSwitch button.active {
+    color: var(--text);
+    background: var(--surface);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+#themeSwitch .themeIcon {
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* ---------- Online rule list example ---------- */
+
+.ruleListTitle {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#toggleRuleListExample {
+    color: var(--accent);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#toggleRuleListExample:hover {
+    text-decoration: underline;
+}
+
+#ruleListExample {
+    margin: 0 0 14px;
+    padding: 12px 16px;
+    color: var(--text);
+    white-space: normal;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+}
+
+#ruleListExample .exampleTitle {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+#ruleListExample ol {
+    margin: 6px 0;
+    padding-left: 22px;
+}
+
+#ruleListExample li {
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+#ruleListExample .exampleNote {
+    margin-top: 8px;
+    color: var(--muted);
+}
+
+#ruleListExample .exampleNote.indented {
+    margin: 0 0 8px 22px;
+}
+
+#ruleListExample .exampleProfile {
+    margin: 10px 0;
+    padding: 10px 12px;
+    line-height: 1.5;
+    background: var(--accent-soft);
+    border-radius: 6px;
+}
+
+#ruleListExample pre {
+    margin: 8px 0 8px 22px;
+    padding: 10px 12px;
+    font-family: Consolas, "Cascadia Mono", monospace;
+    font-size: 12px;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+#ruleListExample code {
+    padding: 1px 4px;
+    font-family: Consolas, "Cascadia Mono", monospace;
+    font-size: 12px;
+    background: var(--code-bg);
+    border-radius: 4px;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 32px 40px;
+    cursor: default;
+    color: var(--text);
+    background: var(--bg);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+
+    visibility: hidden;
+}
+
+td, th, input, select, textarea, button {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    color: var(--accent);
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-top: solid 1px var(--border);
+    margin: 18px 0;
+}
+
+small {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.ltr, .ltr * {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+.link {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--surface-3);
+    border-radius: 5px;
+}
+
+/* ---------- Form controls ---------- */
+
+input[type="text"], select {
+    box-sizing: border-box;
+    height: 30px;
+    padding: 0 8px;
+    color: var(--text);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    transition: border-color .12s, background-color .12s;
+}
+
+input[type="text"]:hover, select:hover {
+    border-color: var(--border-strong);
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: var(--accent);
+    background: var(--surface-3);
+}
+
+input[type="text"][disabled], select[disabled] {
+    color: var(--disabled);
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    accent-color: var(--accent);
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 0 !important;
+    vertical-align: -3px !important;
+}
+
+label {
+    cursor: pointer;
+}
+
+.button {
+    box-sizing: border-box;
+    min-width: 120px;
+    height: 32px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--text);
+    background: var(--surface-3);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color .12s, border-color .12s;
+}
+
+.button:hover {
+    background: var(--hover);
+}
+
+.button:active {
+    background: var(--surface-2);
+}
+
+.button[disabled], .button.disabled {
+    opacity: .45;
+    cursor: default;
+}
+
+.button.bold {
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.button.bold:hover {
+    background: var(--accent-hover);
+}
+
+.button img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ---------- Layout ---------- */
+
+#optionsTable {
+    width: 100%;
+    border-spacing: 0;
+}
+
+#optionsTable td {
+    padding: 0;
+}
+
+#header {
+    margin-bottom: 18px;
+}
+
+#header table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+#header img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#header span.title {
+    font-size: 22px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+#header .version {
+    margin-left: 10px;
+    padding: 2px 8px;
+    color: var(--muted);
+    font-size: 12px;
+    vertical-align: middle;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+#tabsRow td {
+    border-bottom: solid 1px var(--border);
+}
+
+#tabsContainer {
+    display: flex;
+    gap: 4px;
+    margin-bottom: -1px;
+}
+
+#tabsContainer div {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    transition: color .12s, background-color .12s, border-color .12s;
+}
+
+#tabsContainer div img {
+    opacity: .75;
+}
+
+#tabsContainer div.normal:hover {
+    color: var(--text);
+    background: var(--surface);
+}
+
+#tabsContainer div.selected {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+#tabsContainer div.selected img {
+    opacity: 1;
+}
+
+#tabProfilesBody, #tabGeneralBody, #tabImportExportBody, #tabRulesBody {
+    display: none;
+}
+
+.cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+#body {
+    padding: 20px 0 0;
+}
+
+#body .title {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+#body .control {
+    text-align: right;
+}
+
+#body .control hr {
+    margin: 22px 0 16px;
+}
+
+#body .control table {
+    width: calc(100% + 16px);
+    border-spacing: 8px 0;
+    margin: 0 -8px;
+}
+
+#body .control td:first-child {
+    text-align: left;
+}
+
+#body .spacer, #body .spacer25 {
+    height: 25px;
+}
+
+#body .spacer20 {
+    height: 20px;
+}
+
+#body .spacer10 {
+    height: 10px;
+}
+
+#body .spacer5 {
+    height: 5px;
+}
+
+/* ---------- Proxy profiles ---------- */
+
+#proxyTable {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#proxyTable td {
+    padding: 0;
+    vertical-align: top;
+}
+
+#proxyTable th, .tab .title {
+    text-align: start;
+    padding: 0 0 10px 0;
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+#proxyProfiles, .rulesTable {
+    width: 100%;
+    margin-bottom: 12px;
+    table-layout: fixed;
+    border-spacing: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+#proxyProfiles th, #proxyProfiles td, .rulesTable th, .rulesTable td {
+    text-align: start;
+}
+
+#proxyProfiles td {
+    height: 36px;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color .12s;
+}
+
+#proxyProfiles tr:last-child td {
+    border-bottom: 0;
+}
+
+#proxyProfiles tr:hover td {
+    background: var(--surface-2);
+}
+
+#proxyProfiles .selected td, #proxyProfiles .selected:hover td {
+    background: var(--accent-soft);
+    font-weight: 600;
+}
+
+#proxyProfiles .selected td:first-child {
+    box-shadow: inset 3px 0 0 var(--accent);
+}
+
+#proxyProfiles td:first-child {
+    padding: 0 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#proxyProfiles td:last-child {
+    text-align: center;
+}
+
+#proxyProfiles td input, .rulesTable td input {
+    width: 100% !important;
+    height: 28px;
+    display: none;
+}
+
+#proxyProfiles td span, .rulesTable td span {
+    -webkit-padding-start: 4px;
+}
+
+#proxyProfiles td img, .rulesTable td img {
+    cursor: pointer;
+}
+
+.color {
+    padding: 0 6px;
+}
+
+.color div {
+    width: 14px;
+    height: 14px;
+    margin: 0 auto;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .12s;
+}
+
+.color div:hover {
+    transform: scale(1.2);
+}
+
+.blue {
+    background-color: var(--c-blue);
+}
+
+.green {
+    background-color: var(--c-green);
+}
+
+.red {
+    background-color: var(--c-red);
+}
+
+.yellow {
+    background-color: var(--c-yellow);
+}
+
+.purple {
+    background-color: var(--c-purple);
+}
+
+.cblue {
+    color: var(--c-blue);
+}
+
+.cgreen {
+    color: var(--c-green);
+}
+
+.cred {
+    color: var(--c-red);
+}
+
+.cyellow {
+    color: var(--c-yellow);
+}
+
+#proxyProfiles .delete, .rulesTable .delete {
+    height: 28px;
+    background: url("../images/delete.png") center no-repeat;
+    border-radius: 6px;
+    opacity: .7;
+    cursor: pointer;
+    transition: opacity .12s, background-color .12s;
+}
+
+#proxyProfiles .delete:hover, .rulesTable .delete:hover {
+    opacity: 1;
+    background-color: var(--danger-soft);
+}
+
+#proxyProfiles .templateRow, .rulesTable .templateRow {
+    display: none;
+}
+
+#proxyProfiles .unknown td {
+    color: var(--muted);
+    font-style: italic;
+    cursor: default;
+}
+
+#proxyProfiles .unknown td:nth-child(2) * {
+    display: none;
+}
+
+#proxyProfiles .unknown .delete {
+    display: none;
+}
+
+#btn-new, #btnNewRule {
+    min-width: 0;
+}
+
+/* ---------- Panels ---------- */
+
+#profileDetails, #tabGeneralBody table, .optionGroup {
+    width: 100%;
+    border-spacing: 10px;
+    empty-cells: show;
+    padding: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+#profileDetails td {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+#profileDetails td:nth-child(2) {
+    width: 80%;
+    white-space: normal;
+}
+
+#profileDetails td:nth-child(4) {
+    width: 20%;
+    white-space: normal;
+}
+
+#profileDetails input[type="text"] {
+    width: 100%;
+}
+
+#profileDetails tr td label {
+    padding: 0 0 0 4px;
+}
+
+#profileDetails hr {
+    margin: 4px 0;
+}
+
+#profileDetails .disabled, .tab .disabled, .tab .disabled * {
+    color: var(--disabled) !important;
+}
+
+#profileDetails .indent td:first-child, .tab .indent td:first-child {
+    -webkit-padding-start: 22px !important;
+}
+
+#profileDetails .indent td:first-child label {
+    color: var(--muted);
+}
+
+span.indent {
+    -webkit-padding-start: 16px;
+}
+
+.tab div.indent {
+    -webkit-padding-start: 16px;
+    padding-bottom: 8px;
+}
+
+#profileDetails .section td {
+    padding: 8px 0 2px 0;
+}
+
+#profileDetails .section label, .tab .section label {
+    padding: 10px 0;
+}
+
+#tabRulesBody > label .title, .ruleListTitle .title, #tabGeneralBody > label .title, #switchRules > label .title {
+    display: inline-block;
+    padding: 4px 0 12px;
+    color: var(--text);
+    font-size: 13px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+#tabRulesBody td, #tabGeneralBody td, #tabImportExportBody td {
+    white-space: nowrap;
+    padding: 4px;
+}
+
+#tabRulesBody select, #tabGeneralBody select, #tabImportExportBody select {
+    width: 260px;
+}
+
+#tabRulesBody td:nth-child(2), #tabGeneralBody td:nth-child(2), #tabImportExportBody td:nth-child(2) {
+    width: 100%;
+}
+
+#tabGeneralBody p {
+    margin: 8px 0;
+}
+
+/* ---------- Switch rules ---------- */
+
+.rulesTable th {
+    height: 34px;
+    padding: 0 10px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.rulesTable td {
+    height: 36px;
+    padding: 3px 6px;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.rulesTable tr:last-child td {
+    border-bottom: 0;
+}
+
+.rulesTable .tableRow:hover td {
+    background: var(--surface-2);
+}
+
+.rulesTable .defaultRow td {
+    background: var(--surface-2);
+}
+
+.rulesTable .defaultRow .ruleName {
+    font-weight: 600;
+}
+
+.rulesTable .defaultRow .urlPattern {
+    color: var(--muted);
+}
+
+.rulesTable td select {
+    display: block;
+    width: 100% !important;
+    height: 28px !important;
+}
+
+.rulesTable td input[type='radio'] {
+    display: inline-block;
+    width: auto;
+}
+
+.rulesTable td .tag {
+    position: relative;
+    z-index: 100;
+    float: right;
+    font-size: 11px;
+    background-color: var(--accent);
+    color: #fff;
+    padding: 2px 4px;
+    margin-right: 4px;
+    border-radius: 3px;
+}
+
+#rulesTable .tableRow td:nth-child(-n+2) {
+    cursor: text;
+}
+
+#apply2All {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 6px;
+    opacity: .75;
+}
+
+#apply2All:hover {
+    opacity: 1;
+    background: var(--hover);
+}
+
+#ruleListsTable input {
+    display: block;
+}
+
+#ruleListsTable input, #ruleListsTable select {
+    width: 100%;
+}
+
+#autoProxy {
+    display: inline-block;
+    margin: 2px 0 12px;
+}
+
+#tabRulesBody .link {
+    color: var(--accent);
+}
+
+#updatingListIcon {
+    vertical-align: middle;
+    margin: 0 6px;
+}
+
+#lastListUpdate {
+    color: var(--muted);
+}
+
+/* ---------- Import / Export ---------- */
+
+#tabImportExportBody .optionGroup td:nth-child(2) {
+    color: var(--muted);
+    white-space: normal;
+}
+
+#tabImportExportBody .optionGroup .button {
+    min-width: 170px;
+}
+
+#tabImportExportBody input[type='text'] {
+    width: 100%;
+}
+
+#tabImportExportBody input[type='text'].initial {
+    color: var(--muted);
+    font-style: italic;
+}
+
+#tabImportExportBody .title {
+    margin-top: 4px;
+}
+
+/* ---------- General ---------- */
+
+#proxyList {
+    width: 100%;
+    margin-top: -5px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#proxyList td:first-child {
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+#proxyList td:nth-child(2) {
+    width: 100%;
+}
+
+#proxyList input {
+    margin: 0;
+}
+
+#txtProxyListURL {
+    width: 100%;
+}
+
+#quickSwitchDiv p {
+    color: var(--muted);
+}
+
+#quickSwitchDiv p.title, #quickSwitchDiv label.title {
+    color: var(--text);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 13px;
+}
+
+#quickSwitchDiv ul {
+    list-style-type: none;
+    min-height: 44px;
+    width: 45%;
+    min-width: 280px;
+    margin: 0;
+    padding: 4px;
+    background: var(--surface);
+    border: 1px dashed var(--border-strong);
+    border-radius: 8px;
+}
+
+#quickSwitchDiv ul.disabled {
+    opacity: .5;
+}
+
+#quickSwitchDiv ul li {
+    display: flex;
+    align-items: center;
+    margin: 4px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: var(--surface-3);
+    border: 1px solid var(--border);
+    cursor: move;
+}
+
+#cycleEnabled li {
+    background: var(--success-soft);
+    border-color: var(--success-border);
+}
+
+#quickSwitchDiv ul li div {
+    order: -1;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: var(--muted);
+}
+
+#quickSwitchDiv ul li div.blue { background-color: var(--c-blue); }
+#quickSwitchDiv ul li div.green { background-color: var(--c-green); }
+#quickSwitchDiv ul li div.red { background-color: var(--c-red); }
+#quickSwitchDiv ul li div.yellow { background-color: var(--c-yellow); }
+#quickSwitchDiv ul li div.purple { background-color: var(--c-purple); }
+
+#quickSwitchDiv .ui-sortable-helper {
+    box-shadow: var(--shadow);
+}

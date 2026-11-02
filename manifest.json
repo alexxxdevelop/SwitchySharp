@@ -1,0 +1,30 @@
+{
+   "manifest_version": 3,
+   "name": "__MSG_manifest_appName__",
+   "description": "__MSG_manifest_appDescription__",
+   "version": "2.0.0",
+   "default_locale": "en",
+   "minimum_chrome_version": "102",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDahyAUyTKTIkdG3wl6l3yymaWKuIw1qd0qUPcvdkA+9twISbaHjA6PKgh+/RvuUOwacjl47QSpkmgEHK+uUzre3+fbwOhifbnkJ7ZVS7ii92IxCgBf8S7ht2ccAmXIiH4UKAFOonBcGywaJWmGpiYBcc8eBLT9kiGqGTjZBTBkBwIDAQAB",
+   "background": {
+      "service_worker": "background.js"
+   },
+   "action": {
+      "default_icon": {
+         "16": "assets/images/icon-blue.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_manifest_iconTitle__"
+   },
+   "icons": {
+      "16": "assets/images/icon.png",
+      "32": "assets/images/icon-32.png",
+      "128": "assets/images/icon-128.png"
+   },
+   "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+   },
+   "permissions": [ "proxy", "tabs", "storage", "alarms" ],
+   "host_permissions": [ "<all_urls>" ]
+}
